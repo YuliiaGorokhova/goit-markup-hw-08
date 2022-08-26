@@ -1,0 +1,31 @@
+.work__title {
+  margin-bottom: 50px;
+}
+
+.work__list {
+  display: flex;
+  align-items: center;
+}
+
+.work__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.work__item-box {
+  position: relative;
+}
+
+.work__image-name {
+  position: absolute;
+  width: 370px;
+  height: 70px;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include font(14, 16, 700, 0.03em);
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--third-text-color);
+  background-color: rgba(47, 48, 58, 0.8);
+}
