@@ -7,26 +7,40 @@
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  &.is-hidden {
-    opacity: 0;
-    pointer-events: none;
-    visibility: hidden;
+  visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
-}
 
 .modal {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  margin: 93px 15px;
+  
+    // top: 50%;
+  // left: 50%;
+  // transform: translate(-50%, -50%);
   padding: 40px;
-  width: 528px;
-  min-height: 581px;
+  // width: 528px;
+  // min-height: 581px;
   border-radius: 4px;
   background-color: var(--third-text-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
+    @media screen and (max-width: 479px) {
+      padding: 10px;
+    }
+    @include mobile {
+    width: 450px;
+    min-height: 609px;
+    }
+    @include tablet {
+      margin-top: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    }
+    @include desktop {
+    width: 528px;
+    min-height: 581px;
+    }
 }
 
 .modal__btn {
@@ -41,6 +55,7 @@
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
   cursor: pointer;
+  outline: none;
   background-color: var(--third-text-color);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   &:hover,
@@ -128,16 +143,24 @@
 
 .modal__checkbox {
   margin-bottom: 30px;
-  padding-left: 13px;
+
+  @include desktop {
+    padding-left: 13px;
+  }
+  
 }
 
 .modal__check-text {
   display: flex;
   align-items: center;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 14px;
   letter-spacing: 0.03em;
+  // font-weight: 400;
+  // font-size: 14px;
+  // line-height: 24px;
+  // letter-spacing: 0.03em;
   color: var(--second-text-color);
   span {
     display: flex;
@@ -170,9 +193,13 @@
 
 .modal__check-link {
   font-weight: 400;
-  font-size: 14px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 14px;
   letter-spacing: 0.03em;
+  // font-weight: 400;
+  // font-size: 14px;
+  // line-height: 24px;
+  // letter-spacing: 0.03em;
   color: var(--first-link-color);
   text-decoration: underline;
 }
