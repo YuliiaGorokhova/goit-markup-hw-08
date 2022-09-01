@@ -1,17 +1,32 @@
 .clients__title {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+  @include desktop {
+    margin-bottom: 50px;
+  }
 }
 
 .clients__list {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
   gap: 30px;
+}
+
+.clients__item {
+  width: 100%;
+  width: calc((100% - 30px) / 2);
+  @include tablet {
+    width: calc((100% - 60px) / 3); 
+  }
+  @include desktop {
+    width: calc((100% - 150px) / 6); 
+  }
 }
 
 .clients__link {
   display: flex;
-  width: 170px;
+  width: 100%;
+  // width: 170px;
   height: 92px;
   align-items: center;
   justify-content: center;

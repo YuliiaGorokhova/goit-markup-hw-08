@@ -1,15 +1,28 @@
 .filters {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-wrap: wrap;
   margin-bottom: 50px;
-  gap: 8px;
+  gap: 15px 8px;
+  
+  @include tablet {
+    flex-wrap: nowrap;
+    align-items: center;
+  justify-content: center;
+  }
 }
+
+// .filters__item {
+//   display: flex;
+//   gap: 8px;
+//   width: calc((100% - 16px) / 3);
+  
+// }
 
 .filters__btn {
   padding: 6px 22px;
   @include font(16, 26, 500, 0.03em);
-  text-align: center;
+  // display: flex;
+  // text-align: center;
   color: var(--first-text-color);
   background-color: var(--second-background-color);
   border-radius: 4px;

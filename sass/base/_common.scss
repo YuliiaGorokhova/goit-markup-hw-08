@@ -2,6 +2,8 @@ img {
     display: block;
     max-width: 100%;
     height: auto;
+    
+    width: 100%;
   }
   
   svg {
@@ -10,4 +12,8 @@ img {
   
   body {
     font-family: $font-roboto;
+  }
+
+  .no-scroll {
+    overflow: hidden;
   }
