@@ -11,18 +11,10 @@
   }
 }
 
-// .filters__item {
-//   display: flex;
-//   gap: 8px;
-//   width: calc((100% - 16px) / 3);
-  
-// }
 
 .filters__btn {
   padding: 6px 22px;
   @include font(16, 26, 500, 0.03em);
-  // display: flex;
-  // text-align: center;
   color: var(--first-text-color);
   background-color: var(--second-background-color);
   border-radius: 4px;
